@@ -25,6 +25,7 @@ app.get('/', (_,res)=>{
 })
 // append /api for our http requests
 // app.use('/api', Router.dataRouter);
-app.use('/api', Router.productRouter)
+app.use('/api', Router.ProductRoute)
+app.use('/api', Router.CategoryRoute)
 // launch our backend into a port
 app.listen(API_PORT, () => console.log(`LISTENING ON PORT ${API_PORT}`));
