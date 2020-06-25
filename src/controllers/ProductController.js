@@ -19,14 +19,13 @@ const addNewProduct = (req,res, next)=>{
 	productModel.category = category;
 	console.log('productModel is now here' + productModel);
 	productModel.save()
-		.then(dbProduct =>{
+		.then(async dbProduct =>{
 			console.log('DBProduct is now' + dbProduct);
-			const product =dbProduct.populate('name').execPopulate();
-			console.log("After quering the data is" + product);
+			// const product =await dbProduct.populate('name').execPopulate();
+			// console.log("After quering the data is" + product);
 			res.status(status.CREATED).json({
 				success: true,
 				Message: 'Product added succesffully',
-				product,
 			});
 		})
 		.catch(err =>{

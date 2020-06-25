@@ -12,15 +12,15 @@ const addCategories =  (req,res, next) => {
   Category.name = name;
   console.log('Category data is here now' + Category.name);
 	Category.save()
-		.then(dbCategory =>{
+		.then(async (dbCategory) =>{
       console.log('dbConnection is here', dbCategory);
-      const categoryName = dbCategory.populate('name').execPopulate();
-      console.log('After save', categoryName);
+      // let categoryName = await dbCategory.populate('name').execPopulate();
+      // console.log('After save', categoryName);
       res.status(status.CREATED).send({
 				success: true,
-				Message: 'Category Added succefully',
-				categoryName,
-			});
+				Message: 'Category Added succefully'
+				// categoryName,
+      });
 		})
 		.catch(err => {
 			// res.send(status.INTERNAL_SERVER_ERROR);

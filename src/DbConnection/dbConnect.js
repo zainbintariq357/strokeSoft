@@ -2,8 +2,9 @@ import mongoose from 'mongoose';
 const dbRoute =
 'mongodb+srv://zain:1234@nodeintegratereact.xgit4.mongodb.net/<reactnode>?retryWrites=true&w=majority';
 // Here wwe setup our mongoo db connection 
-const Connect = () => {	
-	mongoose.connect(dbRoute,{
+const Connect = () => {
+	// dbRoute	
+	mongoose.connect("mongodb://localhost:27017/apiBuilders",{
 		useNewUrlParser: true,
 		useUnifiedTopology: true
 	});

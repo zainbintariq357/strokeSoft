@@ -8,18 +8,22 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
-  "author": "",
+  "type" : "commonjs",
+  "author": "zainbintariq",
   "license": "ISC",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "esm": "^3.2.25",
     "express": "^4.17.1",
+    "express-promise-router": "^4.0.0",
     "helmet": "^3.22.1",
     "http-status": "^1.4.2",
     "mongoose": "^5.9.18",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
